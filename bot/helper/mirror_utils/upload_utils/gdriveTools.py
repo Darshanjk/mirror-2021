@@ -383,10 +383,10 @@ class GoogleDriveHelper:
                         siurl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={url}&format=text').text
                         siurls = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={urls}&format=text').text
                         buttons.buildbutton("⚡ Index Link", siurl)
-                        buttons.buildbutton("🌐 View Link", siurls)
+                        buttons.buildbutton("▶️ View Link", siurls)
                     else:
                         buttons.buildbutton("⚡ Index Link", url)
-                        buttons.buildbutton("🌐 View Link", urls)
+                        buttons.buildbutton("▶️ View Link", urls)
                 if BUTTON_FOUR_NAME is not None and BUTTON_FOUR_URL is not None:
                     buttons.buildbutton(f"{BUTTON_FOUR_NAME}", f"{BUTTON_FOUR_URL}")
                 if BUTTON_FIVE_NAME is not None and BUTTON_FIVE_URL is not None:
@@ -510,9 +510,9 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(path = self.path[prev_page],
-                                 title = 'Slam Mirror Bot Search',
-                                 author_name='Slam Mirror Bot',
-                                 author_url='https://github.com/breakdowns/slam-mirrorbot',
+                                 title = 'NKL Mirror Bot Search',
+                                 author_name='NKL Rockers',
+                                 author_url='https://github.com/Darshanjk/mirror-2021',
                                  html_content=content)
         return
 
